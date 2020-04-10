@@ -10,7 +10,8 @@ db.databaseConf.sync();
 
 const app = express();
 
-app.use(cors({ originL: "http://localhost:3000" }));
+// allow all frontend access
+app.use(cors());
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
