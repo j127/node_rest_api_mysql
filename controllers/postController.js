@@ -33,7 +33,7 @@ const create = (req, res) => {
  * Get a single post by title
  */
 const getPostByTitle = (req, res) => {
-    const title = req.query.title;
+    const { title } = req.query;
     Post.findOne({
         where: { title: { [Op.like]: `%${title}%` }, published: true },
     })
@@ -49,7 +49,7 @@ const getPostByTitle = (req, res) => {
  * Search for posts by title
  */
 const searchPostsByTitle = (req, res) => {
-    const title = req.query.title;
+    const { title } = req.query;
     Post.findAll({
         where: { title: { [Op.like]: `%${title}%` }, published: true },
     })
