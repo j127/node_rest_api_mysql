@@ -18,7 +18,7 @@ $ npm start
 ```text
 $ curl -XPOST http://localhost:5000/api/posts/create \
     -H "Content-Type: application/json" \
-    -d '{"title":"hello world","author":"someone","is_published":true,"description":"this is a sample post"}'
+    -d '{"title":"hello world","author":"Josh","is_published":true,"description":"this is a sample post"}'
 ```
 
 ```text
