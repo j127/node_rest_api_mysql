@@ -1,9 +1,12 @@
+require("dotenv").config();
+
 const express = require("express");
 const bodyParser = require("body-parser");
 const cors = require("cors");
 
 // const api = require("./routes/index");
-// const db = require("./models");
+const db = require("./models");
+db.databaseConf.sync();
 
 const app = express();
 
