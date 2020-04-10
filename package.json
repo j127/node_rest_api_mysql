@@ -1,0 +1,13 @@
+{
+    "name": "@j127/node_rest_api_mysql",
+    "version": "0.1.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "keywords": [],
+    "author": "J. Cohen <hostelmarketing@gmail.com> (https://github.com/j127)",
+    "license": "ISC",
+    "private": true
+}
