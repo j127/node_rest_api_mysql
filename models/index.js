@@ -1,6 +1,5 @@
 const Sequelize = require("sequelize");
 const config = require("../config/db.config");
-const Post = require("./post")(database, Sequelize);
 
 const database = new Sequelize(config.DB, config.USER, config.PASSWORD, {
     host: config.HOST,
@@ -14,8 +13,13 @@ const database = new Sequelize(config.DB, config.USER, config.PASSWORD, {
     },
 });
 
-module.exports = db = {
+// I don't think this is ideal, but it works for the moment.
+const Post = require("./post")(database, Sequelize);
+
+const db = {
     Sequelize,
     databaseConf: database,
-    models: [Post],
+    models: { Post },
 };
+
+module.exports = db;
